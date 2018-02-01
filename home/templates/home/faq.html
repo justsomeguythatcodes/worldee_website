@@ -1,0 +1,27 @@
+{% extends 'home/header.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <!-- TODO: Add Question Image for FAQ -->
+  <img src="{% static 'home/images/instagram.svg'%}"  width="100px" height="100px"/>
+  <p class="header">FAQ</p>
+
+  <br />
+  <br />
+
+  {% for faq in object_list %}
+    <p>Question: {{ faq.question }}</p>
+    <p>Anwser: {{ faq.answer }}</p>
+    <br  />
+  {% endfor %}
+
+  <br /><br /><br />
+  <br /><br /><br />
+
+</div>
+
+
+{% endblock %}
